@@ -1,0 +1,123 @@
+body{
+	background-color: rgb(180, 230, 255);
+}
+
+#message1{
+	font-size: 12px;
+	margin-top: 18px;
+	text-align: center;
+}
+
+#message2{
+	font-size: 36px;
+	color: white;
+}
+
+#p-glueck{
+	color: pink;
+}
+
+#p-traurig{
+	color: blue;
+}
+
+#p-abenteuer{
+	color: yellow;
+}
+
+#p-wuetend{
+	color: red;
+}
+
+.div-gefuehle{
+	margin: auto;
+	margin-top: 100px;
+	text-align: center;
+	font-family: 'Brush Script MT', cursive;
+}
+
+.gefuehl-image{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+#row-gefuehle-second{
+	margin-top: 50px;
+}
+
+.item .item-thumbnail-left{
+	width: 30px;
+	height: auto;
+}
+
+.bar-hheader{
+	position: fixed;
+	top: 0;
+	height: 50px;
+}
+
+.bar-ffooter{
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+}
+
+.list-books{
+	margin-top: 60px;
+	padding-bottom: 60px;
+}
+
+.formular{
+	margin-top:10px;
+	padding-bottom: 60px;
+}
+
+.book-image{
+	width: 150px;
+	height: auto;
+	
+}
+
+.form-buch-img{
+	margin-top: 60px;
+}
+
+.form-buch-img .item{
+	background-color: rgb(180, 230, 255);
+}
+
+.radio-kreditkarte{
+	background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

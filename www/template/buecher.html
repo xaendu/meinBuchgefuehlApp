@@ -1,0 +1,9 @@
+<div class="list list-books">
+	<a class="item item-thumbnail-left" href="#formular" ng-click="selectBuch(buch);" 
+					ng-repeat="buch in buecher | filter: query | orderBy: 'titel'">
+		<img src="{{buch.imgUrl}}" alt="kein Bild" class="book-image">
+		<h2>{{buch.titel}}</h2>
+		<p>{{buch.autor}}</p>
+		<p>{{buch.erscheinungsjahr}}</p>
+	</a>
+</div>
