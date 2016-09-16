@@ -29,6 +29,10 @@ body{
 	color: red;
 }
 
+#p-glueck, #p-traurig, #p-abenteuer, #p-wuetend{
+	font-size: 30px;
+}
+
 .div-gefuehle{
 	margin: auto;
 	margin-top: 100px;
@@ -69,27 +73,92 @@ body{
 	padding-bottom: 60px;
 }
 
+.list-books img{
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.list-books a{
+	text-decoration: none;
+}
+
+.text-books{
+	height: 120px;
+	padding-left: 20px;
+	color: black;
+	padding-top: 20px;
+}
+
+.text-books p{
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20px; 
+}
+
 .formular{
+	clear: both;
 	margin-top:10px;
 	padding-bottom: 60px;
 }
 
 .book-image{
-	width: 150px;
-	height: auto;
-	
+	width: auto;
+	height: 120px;
+	margin-right: 60px;
+	margin-left: 20px; 
 }
 
 .form-buch-img{
 	margin-top: 60px;
+	height: 120px;
+	background-color: rgb(180, 230, 255);
 }
 
-.form-buch-img .item{
-	background-color: rgb(180, 230, 255);
+.form-buch-img .text-book{
+	padding-top: 20px;
+}
+
+.form-buch-img img{
+	float: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.form-buch-img p{
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
 }
 
 .radio-kreditkarte{
 	background-color: white;
+	padding-bottom: 7px;
+	padding-top: 7px;
+	padding-left: 10px;
+	color: rgba(0, 0, 0, 0.4);;
+}
+
+.contactform{
+	margin-top: 80px;
+	text-align: center;
+}
+
+.contactform textarea, .contactform input{
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+.contactform textarea{
+	margin-bottom: 20px;
+}
+
+#button-contactform{
+	display: block;
+	margin: auto;
+	width: 60%;
+	margin-top: 30px;
 }
 
 

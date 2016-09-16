@@ -1,3 +1,4 @@
+
 var app = angular.module('buecherApp', ['ngRoute']);
 
 app.config(function($routeProvider){
@@ -64,10 +65,15 @@ app.controller('formularCtrl', function($scope, $http){
 					$scope.errorKarte = data.errors.karte;
 					$scope.errorKartennummer = data.errors.kartennr;
 					$scope.errorPruefziffer = data.errors.pruefziffer;
-
+					/*
+					for(personalinfo in data){
+						$scope.personalinfo = data.errors.personalinfo;
+					}
+					*/
 					$scope.message = [];
 
 				}else{
+					
 					$scope.errorVorname = '';
 					$scope.errorNachname = '';
 					$scope.errorStrasse = '';
@@ -79,7 +85,11 @@ app.controller('formularCtrl', function($scope, $http){
 					$scope.errorKarte = '';
 					$scope.errorKartennummer = '';
 					$scope.errorPruefziffer = '';
-					
+					/*
+					for(personalinfo in data){
+						$scope.personalinfo = '';
+					}
+					*/
 					$scope.message = data.message;
 				}
 			});

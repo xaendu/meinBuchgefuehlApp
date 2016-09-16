@@ -1,17 +1,16 @@
-<div ng-controller="contactCtrl" class="container contact-container">
+<div ng-controller="contactCtrl">
 
-	<div class="form-group contactform">
+	<div class="list contactform">
 		<label>Deine Nachricht</label>
-		<textarea class="form-control contact-margin" name="nachricht" rows="5" ng-model="user.nachricht"></textarea>
+		<textarea class="contact-margin" name="nachricht" rows="5" ng-model="user.nachricht"></textarea>
 
 		<label>Deine Emailadresse</label>
-		<input type="text" name="email" class="form-control contact-margin" ng-model="user.email">	
+		<input type="text" name="email" class="contact-margin" ng-model="user.email">	
 		<p ng-show="errorEmail" class="help-block">{{errorEmail}}</p>
-
 	</div>
 
-	<button type="submit" class="btn btn-primary btn-block contact-margin" data-toggle="modal" data-target="#modal">Senden</button>
-
+	<button type="submit" class="button button-balanced" id="button-contactform" data-toggle="modal" data-target="#modal">Senden</button>
+<!--
 	<div id="modal" class="modal fade" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -22,14 +21,14 @@
 						<p>{{message.nachricht}}</p>
 						<p>Die Emailadresse des Absenders: {{message.email}}</p>		
 					</div>
-	aa{{message.nachricht}}
+	
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
+-->
 </div>
 
 

@@ -1,79 +1,78 @@
-
-<div class="form-buch-img" ng-controller="buchGefuehlCtrl">
-    <a class="item item-thumbnail-left">
-		<img src="{{selectedBuch.imgUrl}}" alt="kein Bild">
-		<h2>{{selectedBuch.titel}}</h2>
-		<p>{{selectedBuch.autor}}</p>
-		<p>{{selectedBuch.erscheinungsjahr}}</p>
-	</a>
-</div>
-
-
-
-<div class="list formular" ng-submit="submitForm()" ng-controller="formularCtrl">
-
-	<p><b>Bestellformular</b></p>
+<div ng-controller="formularCtrl">
 	
-	<label class="item item-input">
-		<input type="text" name="vorname" placeholder="Vorname" ng-model="user.vorname" required>
-	</label>
-	<p ng-show="errorVorname" class="">{{errorVorname}}</p>	
+	<div class="form-buch-img">  <!--ng-controller="buchGefuehlCtrl">-->
+		<img src="{{selectedBuch.imgUrl}}" alt="kein Bild" class="book-image">
+		<div class="text-book">
+			<p><b>{{selectedBuch.titel}}</b></>
+			<p>{{selectedBuch.autor}}</p>
+			<p>{{selectedBuch.erscheinungsjahr}}</p>
+		</div>		
+	</div>
 
-	<label class="item item-input">
-		<input type="text" name="nachname" placeholder="Nachname" ng-model="user.nachname">				
-	</label>
-	<p ng-show="errorNachname" class="">{{errorNachname}}</p>
+	<div class="list formular" ng-submit="submitForm()">
 
-	<label class="item item-input">
-		<input type="text" name="strasse" placeholder="Strasse" ng-model="user.strasse">			
-	</label>
-	<p ng-show="errorStrasse" class="">{{errorStrasse}}</p>
+		<p>Bestellformular</p>
+		
+		<label class="item item-input">
+			<input type="text" name="vorname" placeholder="Vorname" ng-model="user.vorname" required>
+		</label>
+		<p ng-show="errorVorname" class="">{{errorVorname}}</p>	
 
-	<label class="item item-input">
-		<input type="text" name="hausnummer" placeholder="Hausnummer" ng-model="user.hausnummer">			
-	</label>
-	<p ng-show="errotHausnummer" class="">{{errorHausnummer}}</p>
+		<label class="item item-input">
+			<input type="text" name="nachname" placeholder="Nachname" ng-model="user.nachname">				
+		</label>
+		<p ng-show="errorNachname" class="">{{errorNachname}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="plz" placeholder="Postleitzahl" ng-model="user.plz">		
-	</label>
-	<p ng-show="errorPlz" class="">{{errorPlz}}</p>
+		<label class="item item-input">
+			<input type="text" name="strasse" placeholder="Strasse" ng-model="user.strasse">			
+		</label>
+		<p ng-show="errorStrasse" class="">{{errorStrasse}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="stadt" placeholder="Stadt" ng-model="user.stadt">			
-	</label>
-	<p ng-show="errorStadt" class="">{{errorStadt}}</p>
+		<label class="item item-input">
+			<input type="text" name="hausnummer" placeholder="Hausnummer" ng-model="user.hausnummer">			
+		</label>
+		<p ng-show="errotHausnummer" class="">{{errorHausnummer}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="land" placeholder="Land" ng-model="user.land">			
-	</label>
-	<p ng-show="errorLand" class="">{{errorLand}}</p>
+		<label class="item item-input">
+			<input type="text" name="plz" placeholder="Postleitzahl" ng-model="user.plz">		
+		</label>
+		<p ng-show="errorPlz" class="">{{errorPlz}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="email" placeholder="Email" ng-model="user.email">			
-	</label>
-	<p ng-show="errorEmail" class="">{{errorEmail}}</p>
+		<label class="item item-input">
+			<input type="text" name="stadt" placeholder="Stadt" ng-model="user.stadt">			
+		</label>
+		<p ng-show="errorStadt" class="">{{errorStadt}}</p>
 
-	<form class="radio-kreditkarte">
-	  &nbsp;<input type="radio" ng-model="user.karte" ng-value="visa" checked>&nbsp;&nbsp;Visa&nbsp; 
-	  <input type="radio" ng-model="user.karte" ng-value="master">&nbsp;&nbsp;Mastercard<br>
-	</form>
-	<p ng-show="errorKarte" class="">{{errorKarte}}</p>
+		<label class="item item-input">
+			<input type="text" name="land" placeholder="Land" ng-model="user.land">			
+		</label>
+		<p ng-show="errorLand" class="">{{errorLand}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="kartennr" placeholder="Kreditkartennummer" ng-model="user.kartennr">			
-	</label>
-	<p ng-show="errorKartennummer" class="">{{errorKartennummer}}</p>
+		<label class="item item-input">
+			<input type="text" name="email" placeholder="Email" ng-model="user.email">			
+		</label>
+		<p ng-show="errorEmail" class="">{{errorEmail}}</p>
 
-	<label class="item item-input">
-		<input type="text" name="pruefziffer" placeholder="Prüfziffer" ng-model="user.pruefziffer">			
-	</label>
-	<p ng-show="errorPruefziffer" class="">{{errorPruefziffer}}</p>
+		<form class="radio-kreditkarte">
+		 	<input type="radio" ng-model="user.karte" ng-value="visa" name="kreditkarte" value="visa"> &nbsp;Visa &nbsp;&nbsp;
+		  	<input type="radio" ng-model="user.karte" ng-value="master" name="kreditkarte" value="master"> &nbsp;Mastercard
+		</form>
+		<p ng-show="errorKarte" class="">{{errorKarte}}</p>
 
-	
-	<button type="submit" class="button button-block button-balanced" data-toggle="modal" data-target="#modal">Senden</button>
-	
-</div>
+		<label class="item item-input">
+			<input type="text" name="kartennr" placeholder="Kreditkartennummer" ng-model="user.kartennr">			
+		</label>
+		<p ng-show="errorKartennummer" class="">{{errorKartennummer}}</p>
+
+		<label class="item item-input">
+			<input type="text" name="pruefziffer" placeholder="Prüfziffer" ng-model="user.pruefziffer">			
+		</label>
+		<p ng-show="errorPruefziffer" class="">{{errorPruefziffer}}</p>
+
+		
+		<button type="submit" class="button button-block button-balanced" data-toggle="modal" data-target="#modal">Senden</button>
+		
+	</div>
 <!--
 	<div id="modal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
@@ -121,8 +120,10 @@
 			</div>
 		</div>
 	</div>
+-->
+</div>
 
--->			
+		
 
 
 
